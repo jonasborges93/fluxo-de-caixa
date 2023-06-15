@@ -2,136 +2,96 @@
 <html>
 <head>
   <title>Fluxo de Caixa</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    th, td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: center;
-    }
-  </style>
-  <script>
-    function calcularTotais() {
-      for (var i = 1; i <= 8; i++) {
-        var totalColuna = 0;
-        var custo = parseFloat(document.getElementById('custo-' + i).value) || 0;
-
-        for (var j = 1; j <= 4; j++) {
-          var valorParcela = parseFloat(document.getElementById('parcela' + j + '-' + i).value) || 0;
-          totalColuna += valorParcela;
-        }
-
-        totalColuna -= custo;
-        document.getElementById('total-' + i).textContent = 'Total: R$ ' + totalColuna.toFixed(2);
-      }
-
-      calcularCapitalGiro();
-    }
-
-    function calcularCapitalGiro() {
-      var totalNegativo = 0;
-
-      for (var i = 1; i <= 8; i++) {
-        var totalColuna = parseFloat(document.getElementById('total-' + i).textContent.replace('Total: R$ ', ''));
-
-        if (totalColuna < 0) {
-          totalNegativo += totalColuna;
-        }
-      }
-
-      document.getElementById('capital-giro').textContent = 'Capital de Giro: R$ ' + totalNegativo.toFixed(2);
-    }
-  </script>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <h2>Fluxo de Caixa</h2>
+  <main>
+    <table>
+      <tr>
+        <th>Produto</th>
+        <th>Parcela 1</th>
+        <th>Parcela 2</th>
+        <th>Parcela 3</th>
+        <th>Parcela 4</th>
+        <th>Parcela 5</th>
+        <th>Parcela 6</th>
+        <th>Parcela 7</th>
+        <th>Parcela 8</th>
+      </tr>
+      <tr>
+        <td><input type="text" name="produto1"></td>
+        <td><input type="text" id="parcela1-1" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela1-2" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela1-3" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela1-4" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela1-5" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela1-6" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela1-7" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela1-8" onblur="calcularTotais()"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="produto2"></td>
+        <td><input type="text" id="parcela2-1" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela2-2" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela2-3" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela2-4" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela2-5" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela2-6" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela2-7" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela2-8" onblur="calcularTotais()"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="produto3"></td>
+        <td><input type="text" id="parcela3-1" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela3-2" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela3-3" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela3-4" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela3-5" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela3-6" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela3-7" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela3-8" onblur="calcularTotais()"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="produto4"></td>
+        <td><input type="text" id="parcela4-1" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela4-2" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela4-3" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela4-4" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela4-5" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela4-6" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela4-7" onblur="calcularTotais()"></td>
+        <td><input type="text" id="parcela4-8" onblur="calcularTotais()"></td>
+      </tr>
+      <tr>
+        <td>Custos</td>
+        <td><input type="text" id="custo-1" onblur="calcularTotais()"></td>
+        <td><input type="text" id="custo-2" onblur="calcularTotais()"></td>
+        <td><input type="text" id="custo-3" onblur="calcularTotais()"></td>
+        <td><input type="text" id="custo-4" onblur="calcularTotais()"></td>
+        <td><input type="text" id="custo-5" onblur="calcularTotais()"></td>
+        <td><input type="text" id="custo-6" onblur="calcularTotais()"></td>
+        <td><input type="text" id="custo-7" onblur="calcularTotais()"></td>
+        <td><input type="text" id="custo-8" onblur="calcularTotais()"></td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td id="total-1">Total: R$ 0.00</td>
+        <td id="total-2">Total: R$ 0.00</td>
+        <td id="total-3">Total: R$ 0.00</td>
+        <td id="total-4">Total: R$ 0.00</td>
+        <td id="total-5">Total: R$ 0.00</td>
+        <td id="total-6">Total: R$ 0.00</td>
+        <td id="total-7">Total: R$ 0.00</td>
+        <td id="total-8">Total: R$ 0.00</td>
+      </tr>
+      <tr>
+        <td>Capital de Giro</td>
+        <td colspan="8" id="capital-giro">Capital de Giro: R$ 0.00</td>
+      </tr>
+    </table>
+  </main>
 
-  <table>
-    <tr>
-      <th>Produto</th>
-      <th>Parcela 1</th>
-      <th>Parcela 2</th>
-      <th>Parcela 3</th>
-      <th>Parcela 4</th>
-      <th>Parcela 5</th>
-      <th>Parcela 6</th>
-      <th>Parcela 7</th>
-      <th>Parcela 8</th>
-    </tr>
-    <tr>
-      <td><input type="text" name="produto1"></td>
-      <td>R$ <input type="text" id="parcela1-1" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela1-2" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela1-3" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela1-4" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela1-5" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela1-6" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela1-7" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela1-8" onblur="calcularTotais()"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="produto2"></td>
-      <td>R$ <input type="text" id="parcela2-1" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela2-2" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela2-3" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela2-4" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela2-5" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela2-6" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela2-7" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela2-8" onblur="calcularTotais()"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="produto3"></td>
-      <td>R$ <input type="text" id="parcela3-1" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela3-2" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela3-3" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela3-4" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela3-5" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela3-6" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela3-7" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela3-8" onblur="calcularTotais()"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="produto4"></td>
-      <td>R$ <input type="text" id="parcela4-1" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela4-2" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela4-3" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela4-4" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela4-5" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela4-6" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela4-7" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="parcela4-8" onblur="calcularTotais()"></td>
-    </tr>
-    <tr>
-      <td>Custos</td>
-      <td>R$ <input type="text" id="custo-1" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="custo-2" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="custo-3" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="custo-4" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="custo-5" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="custo-6" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="custo-7" onblur="calcularTotais()"></td>
-      <td>R$ <input type="text" id="custo-8" onblur="calcularTotais()"></td>
-    </tr>
-    <tr>
-      <td>Total</td>
-      <td id="total-1"></td>
-      <td id="total-2"></td>
-      <td id="total-3"></td>
-      <td id="total-4"></td>
-      <td id="total-5"></td>
-      <td id="total-6"></td>
-      <td id="total-7"></td>
-      <td id="total-8"></td>
-    </tr>
-    <tr>
-      <td>Capital de Giro</td>
-      <td colspan="8" id="capital-giro"></td>
-    </tr>
-  </table>
+  <script src="./script.js"></script>
 </body>
 </html>
