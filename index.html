@@ -5,91 +5,123 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h2>Fluxo de Caixa</h2>
   <main>
-    <table>
-      <tr>
-        <th>Produto</th>
-        <th>Parcela 1</th>
-        <th>Parcela 2</th>
-        <th>Parcela 3</th>
-        <th>Parcela 4</th>
-        <th>Parcela 5</th>
-        <th>Parcela 6</th>
-        <th>Parcela 7</th>
-        <th>Parcela 8</th>
-      </tr>
-      <tr>
-        <td><input type="text" name="produto1"></td>
-        <td><input type="text" id="parcela1-1" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela1-2" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela1-3" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela1-4" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela1-5" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela1-6" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela1-7" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela1-8" onblur="calcularTotais()"></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="produto2"></td>
-        <td><input type="text" id="parcela2-1" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela2-2" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela2-3" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela2-4" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela2-5" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela2-6" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela2-7" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela2-8" onblur="calcularTotais()"></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="produto3"></td>
-        <td><input type="text" id="parcela3-1" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela3-2" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela3-3" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela3-4" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela3-5" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela3-6" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela3-7" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela3-8" onblur="calcularTotais()"></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="produto4"></td>
-        <td><input type="text" id="parcela4-1" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela4-2" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela4-3" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela4-4" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela4-5" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela4-6" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela4-7" onblur="calcularTotais()"></td>
-        <td><input type="text" id="parcela4-8" onblur="calcularTotais()"></td>
-      </tr>
-      <tr>
-        <td>Custos</td>
-        <td><input type="text" id="custo-1" onblur="calcularTotais()"></td>
-        <td><input type="text" id="custo-2" onblur="calcularTotais()"></td>
-        <td><input type="text" id="custo-3" onblur="calcularTotais()"></td>
-        <td><input type="text" id="custo-4" onblur="calcularTotais()"></td>
-        <td><input type="text" id="custo-5" onblur="calcularTotais()"></td>
-        <td><input type="text" id="custo-6" onblur="calcularTotais()"></td>
-        <td><input type="text" id="custo-7" onblur="calcularTotais()"></td>
-        <td><input type="text" id="custo-8" onblur="calcularTotais()"></td>
-      </tr>
-      <tr>
-        <td>Total</td>
-        <td id="total-1">Total: R$ 0.00</td>
-        <td id="total-2">Total: R$ 0.00</td>
-        <td id="total-3">Total: R$ 0.00</td>
-        <td id="total-4">Total: R$ 0.00</td>
-        <td id="total-5">Total: R$ 0.00</td>
-        <td id="total-6">Total: R$ 0.00</td>
-        <td id="total-7">Total: R$ 0.00</td>
-        <td id="total-8">Total: R$ 0.00</td>
-      </tr>
-      <tr>
-        <td>Capital de Giro</td>
-        <td colspan="8" id="capital-giro">Capital de Giro: R$ 0.00</td>
-      </tr>
-    </table>
+    <div class="table">
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo table-item-fluxo-header">Produto</div>
+        <div class="table-item-fluxo table-item-fluxo-header">Parcela 1</div>
+        <div class="table-item-fluxo table-item-fluxo-header">Parcela 2</div>
+        <div class="table-item-fluxo table-item-fluxo-header">Parcela 3</div>
+        <div class="table-item-fluxo table-item-fluxo-header">Parcela 4</div>
+        <div class="table-item-fluxo table-item-fluxo-header">Parcela 5</div>
+        <div class="table-item-fluxo table-item-fluxo-header">Parcela 6</div>
+        <div class="table-item-fluxo table-item-fluxo-header">Valor Remanescente</div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo"><input type="text" name="produto1"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-1"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-2"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-3"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-4"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-5"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-6"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente1"></div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo"><input type="text" name="produto2"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela2-1"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela2-2"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela2-3"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela2-4"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela2-5"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela2-6"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente2"></div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo"><input type="text" name="produto3"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela3-1"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela3-2"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela3-3"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela3-4"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela3-5"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela3-6"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente3"></div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo"><input type="text" name="produto4"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela4-1"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela4-2"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela4-3"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela4-4"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela4-5"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela4-6"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente4"></div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo"><input type="text" name="produto5"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela5-1"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela5-2"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela5-3"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela5-4"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela5-5"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela5-6"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente5"></div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo"><input type="text" name="produto6"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela6-1"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela6-2"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela6-3"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela6-4"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela6-5"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela6-6"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente6"></div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo"><input type="text" name="produto7"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela7-1"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela7-2"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela7-3"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela7-4"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela7-5"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela7-6"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente7"></div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo"><input type="text" name="produto8"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela8-1"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela8-2"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela8-3"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela8-4"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela8-5"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela8-6"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente8"></div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo">Custos</div>
+        <div class="table-item-fluxo"><input type="text" id="custo-1"></div>
+        <div class="table-item-fluxo"><input type="text" id="custo-2"></div>
+        <div class="table-item-fluxo"><input type="text" id="custo-3"></div>
+        <div class="table-item-fluxo"><input type="text" id="custo-4"></div>
+        <div class="table-item-fluxo"><input type="text" id="custo-5"></div>
+        <div class="table-item-fluxo"><input type="text" id="custo-6"></div>
+        <div class="table-item-fluxo"></div>
+      </div>
+      <div class="table-row-fluxo">
+        <div class="table-item-fluxo">Total</div>
+        <div class="table-item-fluxo"><input type="text" id="total-1" disabled></div>
+        <div class="table-item-fluxo"><input type="text" id="total-2" disabled></div>
+        <div class="table-item-fluxo"><input type="text" id="total-3" disabled></div>
+        <div class="table-item-fluxo"><input type="text" id="total-4" disabled></div>
+        <div class="table-item-fluxo"><input type="text" id="total-5" disabled></div>
+        <div class="table-item-fluxo"><input type="text" id="total-6" disabled></div>
+        <div class="table-item-fluxo"></div>
+      </div>
+      <div class="table-row-fluxo-full">
+        <div class="table-item-fluxo">Capital de Giro</div>
+        <div class="table-item-fluxo" id="capital-giro">Capital de Giro: R$ 0.00</div>
+      </div>
+    </div>
   </main>
 
   <script src="./script.js"></script>
