@@ -1,126 +1,144 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fluxo de Caixa</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <main>
+    <header class="header">
+      <h1>Fluxo de caixa</h1>
+      <p>Calcule o fluxo de caixa da sua empresa e veja quanto precisa de Capital de Giro</p>
+    </header>
     <div class="table">
-      <div class="table-row-fluxo">
-        <div class="table-item-fluxo table-item-fluxo-header">Produto</div>
-        <div class="table-item-fluxo table-item-fluxo-header">Parcela 1</div>
-        <div class="table-item-fluxo table-item-fluxo-header">Parcela 2</div>
-        <div class="table-item-fluxo table-item-fluxo-header">Parcela 3</div>
-        <div class="table-item-fluxo table-item-fluxo-header">Parcela 4</div>
-        <div class="table-item-fluxo table-item-fluxo-header">Parcela 5</div>
-        <div class="table-item-fluxo table-item-fluxo-header">Parcela 6</div>
-        <div class="table-item-fluxo table-item-fluxo-header">Valor Remanescente</div>
+      <div class="table-row-header">
+        <div class="table-item-fluxo-header">Produto</div>
+        <div class="table-row-wrapper">
+          <div class="table-row-full">Número de parcelas</div>
+          <div class="table-row-six">
+            <div class="table-item-fluxo-header">1</div>
+            <div class="table-item-fluxo-header">2</div>
+            <div class="table-item-fluxo-header">3</div>
+            <div class="table-item-fluxo-header">4</div>
+            <div class="table-item-fluxo-header">5</div>
+            <div class="table-item-fluxo-header">6</div>
+          </div>
+        </div>
+        <div class="table-item-fluxo-header">Remanescente</div>
       </div>
       <div class="table-row-fluxo">
-        <div class="table-item-fluxo"><input type="text" name="produto1"></div>
-        <div class="table-item-fluxo"><input type="text" id="parcela1-1"></div>
-        <div class="table-item-fluxo"><input type="text" id="parcela1-2"></div>
-        <div class="table-item-fluxo"><input type="text" id="parcela1-3"></div>
-        <div class="table-item-fluxo"><input type="text" id="parcela1-4"></div>
-        <div class="table-item-fluxo"><input type="text" id="parcela1-5"></div>
-        <div class="table-item-fluxo"><input type="text" id="parcela1-6"></div>
-        <div class="table-item-fluxo"><input type="text" id="remanescente1"></div>
+        <div class="table-item-fluxo"><input type="text" name="produto1" placeholder="Informe o produto..."></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-1" placeholder="Ex: 500,00"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-2" placeholder="Ex: 500,00"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-3" placeholder="Ex: 500,00"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-4" placeholder="Ex: 500,00"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-5" placeholder="Ex: 500,00"></div>
+        <div class="table-item-fluxo"><input type="text" id="parcela1-6" placeholder="Ex: 500,00"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente1" placeholder="R$ 0,00"></div>
       </div>
       <div class="table-row-fluxo">
-        <div class="table-item-fluxo"><input type="text" name="produto2"></div>
+        <div class="table-item-fluxo"><input type="text" name="produto2" placeholder="Informe o produto..."></div>
         <div class="table-item-fluxo"><input type="text" id="parcela2-1"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela2-2"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela2-3"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela2-4"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela2-5"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela2-6"></div>
-        <div class="table-item-fluxo"><input type="text" id="remanescente2"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente2" placeholder="R$ 0,00"></div>
       </div>
       <div class="table-row-fluxo">
-        <div class="table-item-fluxo"><input type="text" name="produto3"></div>
+        <div class="table-item-fluxo"><input type="text" name="produto3" placeholder="Informe o produto..."></div>
         <div class="table-item-fluxo"><input type="text" id="parcela3-1"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela3-2"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela3-3"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela3-4"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela3-5"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela3-6"></div>
-        <div class="table-item-fluxo"><input type="text" id="remanescente3"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente3" placeholder="R$ 0,00"></div>
       </div>
       <div class="table-row-fluxo">
-        <div class="table-item-fluxo"><input type="text" name="produto4"></div>
+        <div class="table-item-fluxo"><input type="text" name="produto4" placeholder="Informe o produto..."></div>
         <div class="table-item-fluxo"><input type="text" id="parcela4-1"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela4-2"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela4-3"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela4-4"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela4-5"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela4-6"></div>
-        <div class="table-item-fluxo"><input type="text" id="remanescente4"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente4" placeholder="R$ 0,00"></div>
       </div>
       <div class="table-row-fluxo">
-        <div class="table-item-fluxo"><input type="text" name="produto5"></div>
+        <div class="table-item-fluxo"><input type="text" name="produto5" placeholder="Informe o produto..."></div>
         <div class="table-item-fluxo"><input type="text" id="parcela5-1"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela5-2"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela5-3"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela5-4"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela5-5"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela5-6"></div>
-        <div class="table-item-fluxo"><input type="text" id="remanescente5"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente5" placeholder="R$ 0,00"></div>
       </div>
       <div class="table-row-fluxo">
-        <div class="table-item-fluxo"><input type="text" name="produto6"></div>
+        <div class="table-item-fluxo"><input type="text" name="produto6" placeholder="Informe o produto..."></div>
         <div class="table-item-fluxo"><input type="text" id="parcela6-1"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela6-2"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela6-3"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela6-4"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela6-5"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela6-6"></div>
-        <div class="table-item-fluxo"><input type="text" id="remanescente6"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente6" placeholder="R$ 0,00"></div>
       </div>
       <div class="table-row-fluxo">
-        <div class="table-item-fluxo"><input type="text" name="produto7"></div>
+        <div class="table-item-fluxo"><input type="text" name="produto7" placeholder="Informe o produto..."></div>
         <div class="table-item-fluxo"><input type="text" id="parcela7-1"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela7-2"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela7-3"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela7-4"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela7-5"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela7-6"></div>
-        <div class="table-item-fluxo"><input type="text" id="remanescente7"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente7" placeholder="R$ 0,00"></div>
       </div>
       <div class="table-row-fluxo">
-        <div class="table-item-fluxo"><input type="text" name="produto8"></div>
+        <div class="table-item-fluxo"><input type="text" name="produto8" placeholder="Informe o produto..."></div>
         <div class="table-item-fluxo"><input type="text" id="parcela8-1"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela8-2"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela8-3"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela8-4"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela8-5"></div>
         <div class="table-item-fluxo"><input type="text" id="parcela8-6"></div>
-        <div class="table-item-fluxo"><input type="text" id="remanescente8"></div>
+        <div class="table-item-fluxo"><input type="text" id="remanescente8" placeholder="R$ 0,00"></div>
       </div>
-      <div class="table-row-fluxo">
-        <div class="table-item-fluxo">Custos</div>
-        <div class="table-item-fluxo"><input type="text" id="custo-1"></div>
-        <div class="table-item-fluxo"><input type="text" id="custo-2"></div>
-        <div class="table-item-fluxo"><input type="text" id="custo-3"></div>
-        <div class="table-item-fluxo"><input type="text" id="custo-4"></div>
-        <div class="table-item-fluxo"><input type="text" id="custo-5"></div>
-        <div class="table-item-fluxo"><input type="text" id="custo-6"></div>
-        <div class="table-item-fluxo"></div>
-      </div>
-      <div class="table-row-fluxo">
-        <div class="table-item-fluxo">Total</div>
-        <div class="table-item-fluxo"><input type="text" id="total-1" disabled></div>
-        <div class="table-item-fluxo"><input type="text" id="total-2" disabled></div>
-        <div class="table-item-fluxo"><input type="text" id="total-3" disabled></div>
-        <div class="table-item-fluxo"><input type="text" id="total-4" disabled></div>
-        <div class="table-item-fluxo"><input type="text" id="total-5" disabled></div>
-        <div class="table-item-fluxo"><input type="text" id="total-6" disabled></div>
-        <div class="table-item-fluxo"></div>
-      </div>
-      <div class="table-row-fluxo-full">
-        <div class="table-item-fluxo">Capital de Giro</div>
-        <div class="table-item-fluxo" id="capital-giro">Capital de Giro: R$ 0.00</div>
-      </div>
+      <footer class="footer">
+        <div class="footer-wrapper">
+          <div class="footer-box-left">
+            <div class="table-row-fluxo">
+              <div class="table-item-fluxo-header">Custo Mensal</div>
+              <div class="table-item-fluxo table-item-costs"><input type="text" id="custo-1" placeholder="Ex: 800,00"></div>
+              <div class="table-item-fluxo table-item-costs"><input type="text" id="custo-2" placeholder="Ex: 800,00"></div>
+              <div class="table-item-fluxo table-item-costs"><input type="text" id="custo-3" placeholder="Ex: 800,00"></div>
+              <div class="table-item-fluxo table-item-costs"><input type="text" id="custo-4" placeholder="Ex: 800,00"></div>
+              <div class="table-item-fluxo table-item-costs"><input type="text" id="custo-5" placeholder="Ex: 800,00"></div>
+              <div class="table-item-fluxo table-item-costs"><input type="text" id="custo-6" placeholder="Ex: 800,00"></div>
+              <div class="table-item-fluxo table-item-costs"></div>
+            </div>
+            <div class="table-row-fluxo">
+              <div class="table-item-fluxo-header">Total do Mês</div>
+              <div class="table-item-fluxo table-item-total"><input type="text" id="total-1" placeholder="R$ 0,00" disabled></div>
+              <div class="table-item-fluxo table-item-total"><input type="text" id="total-2" placeholder="R$ 0,00" disabled></div>
+              <div class="table-item-fluxo table-item-total"><input type="text" id="total-3" placeholder="R$ 0,00" disabled></div>
+              <div class="table-item-fluxo table-item-total"><input type="text" id="total-4" placeholder="R$ 0,00" disabled></div>
+              <div class="table-item-fluxo table-item-total"><input type="text" id="total-5" placeholder="R$ 0,00" disabled></div>
+              <div class="table-item-fluxo table-item-total"><input type="text" id="total-6" placeholder="R$ 0,00" disabled></div>
+              <div class="table-item-fluxo table-item-total"></div>
+            </div>
+          </div>
+          <div class="footer-box-right">
+            <div class="table-row-fluxo-full">
+              <div class="table-item-fluxo">Seu Capital de Giro</div>
+              <div class="table-item-fluxo" id="capital-giro">R$ 0,00</div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </main>
 

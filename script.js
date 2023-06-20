@@ -331,7 +331,10 @@ function atualizarCapitalDeGiro() {
     totalNegativo += capitalDeGiroTotal_6;
   }
 
-  document.getElementById('capital-giro').textContent = 'Capital de Giro: R$ ' + totalNegativo.toFixed(2);
+  //Formatando valor para BRL
+  totalNegativoFormated = totalNegativo.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+  document.getElementById('capital-giro').textContent = totalNegativoFormated;
 
 }
 
