@@ -1,4 +1,4 @@
-//Revuperando os INPUTs
+//Recuperando os INPUTs
 let parcela1_1 = document.getElementById("parcela1-1");
 let parcela2_1 = document.getElementById("parcela2-1");
 let parcela3_1 = document.getElementById("parcela3-1");
